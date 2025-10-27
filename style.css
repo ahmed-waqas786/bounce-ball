@@ -1,0 +1,100 @@
+body{
+    padding: 0px;
+    width: 0px;
+    box-sizing: border-box;
+
+}
+section{
+    height: 600px;
+    width: 60vw;
+    margin: auto;
+    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+
+}
+div {
+  background: red;
+  height: 80px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  animation: ballanimation;
+  animation-duration: 4s;
+  animation-iteration-count: 3 ;
+  animation-timing-function: ease-in-out;
+  transition: 3s;
+
+
+  /* transition-property: width,height,background-color;
+  transition-duration: 1.5s;
+  transition-delay: 1;
+  transition-timing-function: ease-in-out; */
+/*  transition: width 1s ease 2s, height 2s ease-in 3s, background-color 3s ease-out 4s; */
+/* animation: widthandheight;
+animation-duration: 3s;
+animation-iteration-count: 3 ;
+animation-delay: 3s; */
+
+}
+
+
+/*div:hover {
+  width:200px;
+  height:200px;
+  background-color: blue; */
+
+
+/* @keyframes widthandheight {
+    from {
+        width: 100px;
+        height: 100px;
+    }
+
+    to {
+        width: 200px;
+        height: 200px;
+
+    } */ 
+
+    @keyframes ballanimation {
+        0%{
+            top: 0%;
+            left: 0%;
+        }
+        
+        25%{
+            top: 80%;
+            left: 80%;
+        }
+
+        50%{
+            top: 20%;
+            right:20% ;
+        }
+
+        75%{
+            top: 80%;
+            left: 10%;
+        }
+
+        100%{
+            top: 60%;
+            left: 80%
+        }
+    }
+     /* Mobile use  */
+
+/* === Media Query (نیچے لگاؤ) === */
+@media (max-width: 480px) {
+  section {
+    width: 95vw;
+    height: 350px;
+  }
+
+  div {
+    width: 40px;
+    height: 40px;
+    animation-duration: 3.5s;
+  }
+}
